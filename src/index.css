@@ -1,0 +1,105 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 215 92% 8%;
+    --foreground: 220 14% 85%;
+
+    --card: 217 71% 13%;
+    --card-foreground: 220 14% 85%;
+
+    --popover: 217 71% 13%;
+    --popover-foreground: 220 14% 85%;
+
+    --primary: 210 100% 56%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 206 33% 32%;
+    --secondary-foreground: 220 14% 85%;
+
+    --muted: 206 33% 32%;
+    --muted-foreground: 204 16% 72%;
+
+    --accent: 206 33% 32%;
+    --accent-foreground: 220 14% 85%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 212 38% 18%;
+    --input: 216 71% 6%;
+    --ring: 210 100% 56%;
+
+    --radius: 0.5rem;
+  }
+  
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-blog-background text-blog-text;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-blog-title font-bold;
+  }
+  
+  p {
+    @apply text-blog-text;
+  }
+}
+
+.github-markdown pre {
+  @apply bg-blog-post p-4 rounded-lg my-4 overflow-x-auto;
+}
+
+.github-markdown code {
+  @apply font-mono text-blog-blue;
+}
+
+.github-markdown pre code {
+  @apply text-blog-text;
+}
+
+.github-markdown p {
+  @apply mb-4;
+}
+
+.github-markdown h1, 
+.github-markdown h2, 
+.github-markdown h3, 
+.github-markdown h4, 
+.github-markdown h5, 
+.github-markdown h6 {
+  @apply text-blog-title font-bold mt-6 mb-4;
+}
+
+.github-markdown h1 {
+  @apply text-2xl;
+}
+
+.github-markdown h2 {
+  @apply text-xl;
+}
+
+.github-markdown a {
+  @apply text-blog-blue hover:underline;
+}
+
+.github-markdown ul, 
+.github-markdown ol {
+  @apply pl-6 mb-4;
+}
+
+.github-markdown ul {
+  @apply list-disc;
+}
+
+.github-markdown ol {
+  @apply list-decimal;
+}
